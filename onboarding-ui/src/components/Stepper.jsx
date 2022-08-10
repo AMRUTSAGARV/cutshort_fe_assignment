@@ -66,7 +66,7 @@ return (
        <div className='relative flex flex-col items-center text-teal-600'>
           <div className={`rounded-full transition duration-500 ease-in-out border-2 border-gary-300 h-12 w-12 flex items-center justify-center py-3 ${
             step.selected
-             ? "bg-green-600 text-white font-bold border border-green-600": ""
+             ? "bg-indigo-600 text-white font-bold border border-indigo-600": ""
           }`}>   
           {step.completed ? (
             <span className='text-white font-bold text-xl'>&#10003;</span>
@@ -76,7 +76,7 @@ return (
           {step.description}
           </div>
         </div>
-      <div className={`flex-auto border-t-2 transition duration-500 ease-in-out ${step.completed ? "border-green-600": "border-gray-300"}`}>     </div>
+      <div className={`flex-auto border-t-2 transition duration-500 ease-in-out ${step.completed ? "border-indigo-600": "border-gray-300"}`}>     </div>
     </div>
   
 );
