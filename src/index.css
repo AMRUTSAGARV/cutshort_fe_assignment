@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@300&family=Poppins:ital,wght@0,400;0,600;1,600;1,700&family=Roboto:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background: #f1f5f9;
+  
+}
