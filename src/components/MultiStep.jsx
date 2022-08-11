@@ -84,7 +84,7 @@ return (
 
   return (
     <div>
-      <img src='/eden.jpg' alt='logo' className='h-screen-mt-14'/>
+    <div className='justify-end'>  <img src="/eden" alt='logo' className='h-screen-mt-14'/></div>
 
 <div className='mx-4 p-4 flex justify-between items-center'>
   

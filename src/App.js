@@ -37,7 +37,7 @@ function App() {
   };
 
   return (
-    <div className="md:w-1/2 mx-auto shadow-xl rounded-2xl pb-2 bg-white px-36">
+    <div className="md:w-1/2    mx-auto shadow-xl rounded-2xl pb-2 bg-white px-36">
       <div className="container horizontal mt-5">
         <MultiStep steps={steps} currentStep={currentStep} />
         <div className="my-10 p-10">
