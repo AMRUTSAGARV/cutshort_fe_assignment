@@ -2,7 +2,7 @@ import React, {useEffect, useState,useRef} from 'react'
 
 
 
-const Stepper = ({steps, currentStep}) => {
+const MultiStep = ({steps, currentStep}) => {
 
 const [newStep, setNewStep]= useState([]);
 const stepRef = useRef();
@@ -46,8 +46,8 @@ const stepsState = steps.map((step, index)=>
 Object.assign({}, {
   description: step,
   completed: false,
-  highlighted: index == 0 ? true : false,
-  selected: index == 0 ? true : false ,
+  highlighted: index === 0 ? true : false,
+  selected: index === 0 ? true : false ,
 })
 );
 stepRef.current = stepsState;
@@ -73,7 +73,7 @@ return (
           ):(index+1)}
           </div>
           <div className={`absolute top-0 text-center mt-16 w-32 text-xs font-medium uppercase ${step.highlighted ? "text-gray-900" : "text-gray-400"}`}> 
-          {step.description}
+          {/* {step.description} */}
           </div>
         </div>
       <div className={`flex-auto border-t-2 transition duration-500 ease-in-out ${step.completed ? "border-indigo-600": "border-gray-300"}`}>     </div>
@@ -83,11 +83,16 @@ return (
   } );
 
   return (
-    <div className='mx-4 p-4 flex justify-between items-center'>
-     {displaySteps}
+    <div>
+    <div className='justify-end'>  <img src="/eden" alt='logo' className='h-screen-mt-14'/></div>
 
+<div className='mx-4 p-4 flex justify-between items-center'>
+  
+ {displaySteps}
+
+</div>
     </div>
   )
 }
 
-export default Stepper
+export default MultiStep
