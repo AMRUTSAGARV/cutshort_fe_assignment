@@ -1,8 +1,8 @@
 import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
-import AddTutorial from "./components/add-tutorial";
-import Tutorial from "./components/tutorial";
-import TutorialsList from "./components/tutorials-list";
+import AddTutorial from "./components/AddTutorial";
+import Tutorial from "./components/Tutorial";
+import TutorialsList from "./components/TutorialsList";
 
 //These child components used here are called TutorialDataService methods which use axios to make HTTP requests and receive responses.
 function App() {
