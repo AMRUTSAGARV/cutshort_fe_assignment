@@ -1,5 +1,6 @@
 import http from "../http-common";
 
+// services are just ordinary classes which will contain functions of your own choice
 const getAll = () => {
   return http.get("/tutorials");
 };
