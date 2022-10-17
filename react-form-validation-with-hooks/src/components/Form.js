@@ -1,6 +1,39 @@
 import React from "react";
+import { useForm, useform } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as Yup from "yup";
 
 const Form = () => {
+  const validationSchema = Yup.object().shape({
+    fullname: Yup.string().required("Fullname is required"),
+    username: Yup.string()
+      .required("Username is required")
+      .min(6, "Username must be at least 6 characters")
+      .max(20, "Username must not exceed 20 characters"),
+    email: Yup.string().required("Email is required").email("Email is invalid"),
+    password: Yup.string()
+      .required("Password is required")
+      .min(6, "Password must be atleast 6 character")
+      .max(40, "Password must not exceed 40 characters"),
+    confirmPassword: Yup.string()
+      .required("Confirm password is required")
+      .oneOf([Yup.ref("password"), null], "Confirm password does not match"),
+    acceptTerms: Yup.bool().oneOf([true], "Accept Terms is required"),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(validationSchema),
+  });
+
+  const onSubmit = (data) => {
+    console.log(JSON.stringify(data, null, 2));
+  };
+
   return (
     <div className="fixed inset-0 justify-center items-center flex">
       <div className="w-full max-w-xs">
